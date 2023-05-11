@@ -9,26 +9,26 @@ namespace Homework_number_39
             int positionX = 10;
             int positionY = 10;
 
-            Render render = new Render();
+            Renderer renderer = new Renderer();
             Player player = new Player(positionX, positionY);
 
-            render.DrawPlayer(player.PositionX, player.PositionY);
+            renderer.DrawPlayer(player.PositionX, player.PositionY);
         }
     }
 
     class Player
     {
-        public int PositionX { get; private set; }
-        public int PositionY { get; private set; }
-
         public Player(int positionX, int positionY)
         {
             PositionX = positionX;
             PositionY = positionY;
         }
+
+        public int PositionX { get; private set; }
+        public int PositionY { get; private set; }
     }
 
-    class Render
+    class Renderer
     {
         public void DrawPlayer(int positionX, int positionY, char playerSymbol = '@')
         {
